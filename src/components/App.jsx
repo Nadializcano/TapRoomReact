@@ -1,4 +1,5 @@
 import React from 'react'
+import KegsList from './KegsList'
 
 function App(){
   return (
@@ -6,7 +7,7 @@ function App(){
       <style global jsx>{`
             
             `}</style>
-  
+  <KegsList/>
 
     </div>
   )
