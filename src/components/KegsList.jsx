@@ -1,7 +1,8 @@
 import React from 'react'
-export default BeerList
+import Kegs from './Kegs'
+export default KegsList
 
-const availableBeer = [
+const availableKegs = [
   {
     name: 'Elysian IPA',
     brand: 'Elysian Brewing',
@@ -44,13 +45,13 @@ const availableBeer = [
   },
 ]
 
-function BeerList(){
+function KegsList(){
 
   return (
     <div>
       <hr/>
-      {availableBeer.map((beer, index) =>
-        <Beer nameh={product.name}
+      {availableKegs.map((kegs, index) =>
+        <Kegs nameh={product.name}
           brand={product.brand}
           price={product.price}
           key={index}/>
