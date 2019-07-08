@@ -2,7 +2,7 @@ import React from 'react';
 import KegsList from './KegsList';
 import Header from './Header';
 import NavBar from './NavBar';
-// import { Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 function App(){
   return (
@@ -11,8 +11,12 @@ function App(){
             
             `}</style>
       <Header/>
+      <Switch>
+      <Route exact path='/' component={KegsList} />
+      </Switch>
       <NavBar/>
       <KegsList/>
+      
 
     </div>
   );
