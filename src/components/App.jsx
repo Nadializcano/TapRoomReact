@@ -1,5 +1,6 @@
 import React from 'react';
 import KegsList from './KegsList';
+import { Switch, Route } from 'react-router-dom';
 
 function App(){
   return (
@@ -7,6 +8,7 @@ function App(){
       <style global jsx>{`
             
             `}</style>
+            <Header/>
       <KegsList/>
 
     </div>
