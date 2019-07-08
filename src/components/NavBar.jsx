@@ -11,10 +11,13 @@ function NavBar(){
         background-color: #4C4B4B;
         color: white;
       }
+      to="/" {
+        color: white;
+      }
             
             `}</style>
       <div id="bar"> 
-        <Link to="/">Home</Link> | <Link to="/newkegs">Add Kegs</Link>
+        <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Home</Link> | <Link to="/newkegs" style={{ textDecoration: 'none', color: 'white' }}>Add Kegs</Link>
              
       </div>
     </div>
