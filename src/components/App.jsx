@@ -12,12 +12,11 @@ function App(){
             
             `}</style>
       <Header/>
-      <Switch>
-      <Route exact path='/' component={KegsList} />
-      <Route exact path='/newkegs' component={NewKegsForm} />
-      </Switch>
       <NavBar/>
-      <KegsList/>
+      <Switch>
+        <Route exact path='/' component={KegsList} />
+        <Route exact path='/newkegs' component={NewKegsForm} />
+      </Switch>
       
 
     </div>
