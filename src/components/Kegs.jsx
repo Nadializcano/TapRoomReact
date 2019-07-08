@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function Kegs(props){
   return (
@@ -11,14 +11,14 @@ function Kegs(props){
       <h2>{props.name}</h2>
       <h2>{props.brand}</h2>
       <h2>{props.price}</h2>
-    
-  )
+    </div>
+  );
 }
 
 Kegs.propTypes = {
   name: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
-}
+};
 
-export default Kegs
+export default Kegs;

@@ -1,5 +1,5 @@
-import React from 'react'
-import KegsList from './KegsList'
+import React from 'react';
+import KegsList from './KegsList';
 
 function App(){
   return (
@@ -7,10 +7,10 @@ function App(){
       <style global jsx>{`
             
             `}</style>
-  <KegsList/>
+      <KegsList/>
 
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
