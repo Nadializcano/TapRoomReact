@@ -5,12 +5,26 @@ function Kegs(props){
   return (
     <div>
       <style jsx>{`
+        
+        h2 {
+          text-align: left;
+          padding: 10px;
+        }
+        
+        h3 {
+          text-align: left;
+          padding: 10px;
+        }
+        
+        h4 {
+          text-align: left;
+          padding: 10px;
+        }
             
       `}</style>
-
-      <h2>{props.name}</h2>
       <h2>{props.brand}</h2>
-      <h2>{props.price}</h2>
+      <h3>{props.name}</h3>
+      <h4>${props.price}</h4>
     </div>
   );
 }

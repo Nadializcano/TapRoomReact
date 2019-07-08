@@ -6,42 +6,42 @@ const availableKegs = [
   {
     name: 'Elysian IPA',
     brand: 'Elysian Brewing',
-    price: '109',
+    price: '12.00',
   },
   {
     name: 'Seattle Cider',
     brand: 'Seattle Cider Company',
-    price: '129',
+    price: '13.30',
   },
   {
     name: 'Stella Artois',
     brand: 'Stella Artois',
-    price: '109',
+    price: '10.00',
   },
   {
     name: 'Lagunitas IPA',
     brand: 'Lagunitas Brewing Company',
-    price: '129',
+    price: '9.00',
   },
   {
     name: 'Sierra Nevada',
     brand: 'Sierra Nevada Brewing Co.',
-    price: '100',
+    price: '9.00',
   },
   {
     name: 'Deschutes Mirror Pond',
     brand: 'Deschutes Brewery',
-    price: '199',
+    price: '10.00',
   },
   {
     name: 'Pilsner Urquell',
     brand: 'Pilsner Urquell',
-    price: '219',
+    price: '13.00',
   },
   {
     name: 'Alaskan Amber',
     brand: 'Alaskan Brewing Co.',
-    price: '100',
+    price: '10.00',
   },
 ];
 

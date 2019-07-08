@@ -1,6 +1,8 @@
 import React from 'react';
 import KegsList from './KegsList';
-import { Switch, Route } from 'react-router-dom';
+import Header from './Header';
+import NavBar from './NavBar';
+// import { Switch, Route } from 'react-router-dom';
 
 function App(){
   return (
@@ -8,7 +10,8 @@ function App(){
       <style global jsx>{`
             
             `}</style>
-            <Header/>
+      <Header/>
+      <NavBar/>
       <KegsList/>
 
     </div>
