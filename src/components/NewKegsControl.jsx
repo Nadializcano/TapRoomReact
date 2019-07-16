@@ -7,6 +7,7 @@ class NewKegsControl extends React.Component {
     this.state = {
       formVisibleOnPage: false
     };
+    this.handleClick = this.handleClick.bind(this);
   }
   
   handleclick(){
