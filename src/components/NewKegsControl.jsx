@@ -12,6 +12,7 @@ class NewKegsControl extends React.Component {
     return (
       <div>
       <p>test</p>
+      <strong onClick={this.handleclick}>Click</strong>
       </div>
     );
   }
