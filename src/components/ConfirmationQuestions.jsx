@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ConfirmationQuestions(){
+function ConfirmationQuestions(props){
   return (
     <div>
     <p>Do you want to add a new Keg?</p>
-    <button>Yes</button>
+    <button onClick={props.onConfirmationAdd}>Yes</button>
     </div>
   );
 }
