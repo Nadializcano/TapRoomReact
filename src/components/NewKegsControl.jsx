@@ -1,4 +1,5 @@
 import React from 'react';
+import ConfirmationQuestions from './ConfirmationQuestions';
 
 class NewKegsControl extends React.Component {
   
@@ -15,10 +16,7 @@ class NewKegsControl extends React.Component {
   }
   render(){
     return (
-      <div>
-      <p>test</p>
-      <strong onClick={this.handleclick}>Click</strong>
-      </div>
+      <ConfirmationQuestions />
     );
   }
 }
