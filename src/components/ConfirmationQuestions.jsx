@@ -1,7 +1,7 @@
 import React from 'react';
 
 function ConfirmationQuestions(){
-  reuturn (
+  return (
     <div>
     <p>Do you want to add a new Keg?</p>
     <button>Yes</button>

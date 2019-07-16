@@ -1,5 +1,6 @@
 import React from 'react';
 import ConfirmationQuestions from './ConfirmationQuestions';
+import NewKegsForm from './NewKegsForm';
 
 class NewKegsControl extends React.Component {
   
@@ -8,15 +9,23 @@ class NewKegsControl extends React.Component {
     this.state = {
       formVisibleOnPage: false
     };
-    this.handleClick = this.handleClick.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
   }
   
-  handleclick(){
-    this.setState({formVisibleOnPage: true});
-  }
+  // handleclick(){
+  //   this.setState({formVisibleOnPage: true});
+  //}
   render(){
-    return (
-      <ConfirmationQuestions />
+      let currentlyVisibleContent = null;
+      if(this.state.formVisibleOnPage){
+        currentlyVisibleContent = <NewKegsForm />;
+      } else {
+        currentlyVisibleContent = <ConfirmationQuestions />;
+      }
+      return (
+        <div>
+        {currentlyVisibleContent}
+        </div>
     );
   }
 }

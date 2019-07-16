@@ -3,7 +3,7 @@ import KegsList from './KegsList';
 import Header from './Header';
 import NavBar from './NavBar';
 import { Switch, Route } from 'react-router-dom';
-import NewKegsForm from './NewKegsForm';
+import NewKegsControl from './NewKegsControl';
 
 function App(){
   return (
@@ -15,7 +15,7 @@ function App(){
       <NavBar/>
       <Switch>
         <Route exact path='/' component={KegsList} />
-        <Route exact path='/newkegs' component={NewKegsForm} />
+        <Route exact path='/newkegs' component={NewKegsControl} />
       </Switch>
       
 
