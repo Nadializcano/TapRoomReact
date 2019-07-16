@@ -9,12 +9,12 @@ class NewKegsControl extends React.Component {
     this.state = {
       formVisibleOnPage: false
     };
-    // this.handleClick = this.handleClick.bind(this);
+    this.handleTroubleshootingConfirmation = this.handleTroubleshootingConfirmation.bind(this);
   }
   
-  // handleclick(){
-  //   this.setState({formVisibleOnPage: true});
-  //}
+  handleTroubleshootingConfirmation(){
+    this.setState({formVisibleOnPage: true});
+  }
   render(){
       let currentlyVisibleContent = null;
       if(this.state.formVisibleOnPage){
