@@ -1,8 +1,16 @@
 import React from 'react';
 
 function NewKegsForm(){
+  let _brand = null;
+  let _name = null;
+  let price = null;
+  
   function handleNewKegsFormSubmission(event){
     event.preventDefault();
+    _brand.value = '';
+    _name.value = '';
+    _price.value = '';
+    
   }
   return (
     <div>
