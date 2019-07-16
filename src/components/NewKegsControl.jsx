@@ -8,6 +8,10 @@ class NewKegsControl extends React.Component {
       formVisibleOnPage: false
     };
   }
+  
+  handleclick(){
+    this.setState({formVisibleOnPage: true});
+  }
   render(){
     return (
       <div>
