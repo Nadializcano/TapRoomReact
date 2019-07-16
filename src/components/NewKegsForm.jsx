@@ -3,7 +3,7 @@ import React from 'react';
 function NewKegsForm(){
   return (
     <div>
-      <form>
+      <form onSubmit={handleNewKegsFormSubmission}>
         <input 
           type='text'
           id='brand'

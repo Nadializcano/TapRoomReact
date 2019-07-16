@@ -12,7 +12,7 @@ class NewKegsControl extends React.Component {
     this.handleConfirmationAdd = this.handleConfirmationAdd.bind(this);
   }
   
-  handleConfirmatinAdd(){
+  handleConfirmationAdd(){
     this.setState({formVisibleOnPage: true});
   }
   render(){
