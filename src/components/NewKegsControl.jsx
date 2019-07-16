@@ -9,10 +9,10 @@ class NewKegsControl extends React.Component {
     this.state = {
       formVisibleOnPage: false
     };
-    this.handleTroubleshootingConfirmation = this.handleTroubleshootingConfirmation.bind(this);
+    this.handleConfirmationAdd = this.handleConfirmationAdd.bind(this);
   }
   
-  handleTroubleshootingConfirmation(){
+  handleConfirmatinAdd(){
     this.setState({formVisibleOnPage: true});
   }
   render(){
@@ -20,7 +20,7 @@ class NewKegsControl extends React.Component {
       if(this.state.formVisibleOnPage){
         currentlyVisibleContent = <NewKegsForm />;
       } else {
-        currentlyVisibleContent = <ConfirmationQuestions />;
+        currentlyVisibleContent = <ConfirmationQuestions onConfirmationAdd={this.handleConfirmationAdd} />;
       }
       return (
         <div>
