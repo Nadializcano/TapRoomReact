@@ -12,13 +12,15 @@ function KegsList(props){
         <Kegs name={kegs.name}
           brand={kegs.brand}
           price={kegs.price}
+          currentRouterPath={props.currentRouterPath}
           key={index}/>
       )}
     </div>
   );
 }
 KegsList.propTypes = {
-  kegsList: PropTypes.array
+  kegsList: PropTypes.array,
+  currentRouterPath: PropTypes.string
 };
 
 export default KegsList;
