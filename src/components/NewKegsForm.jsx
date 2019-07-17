@@ -1,12 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function NewKegsForm(){
+function NewKegsForm(props){
   let _brand = null;
   let _name = null;
-  let price = null;
+  let _price = null;
   
   function handleNewKegsFormSubmission(event){
     event.preventDefault();
+    props.onNewKegsCreation({brand: _brand.value, name: _name.value, price: _price.value});
     _brand.value = '';
     _name.value = '';
     _price.value = '';
@@ -35,5 +37,9 @@ function NewKegsForm(){
     </div>
   );
 }
+
+NewKegsForm.propTypes = {
+  onNewKegsCreation: PropTypes.func
+};
 
 export default NewKegsForm;

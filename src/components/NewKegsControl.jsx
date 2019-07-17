@@ -1,6 +1,7 @@
 import React from 'react';
 import ConfirmationQuestions from './ConfirmationQuestions';
 import NewKegsForm from './NewKegsForm';
+import PropTypes from 'prop-types';
 
 class NewKegsControl extends React.Component {
   
@@ -18,7 +19,7 @@ class NewKegsControl extends React.Component {
   render(){
       let currentlyVisibleContent = null;
       if(this.state.formVisibleOnPage){
-        currentlyVisibleContent = <NewKegsForm />;
+        currentlyVisibleContent = <NewKegsForm onNewKegsCreation={this.props.onNewKegsCreation} />;
       } else {
         currentlyVisibleContent = <ConfirmationQuestions onConfirmationAdd={this.handleConfirmationAdd} />;
       }
@@ -29,5 +30,9 @@ class NewKegsControl extends React.Component {
     );
   }
 }
+
+NewKegsControl.propTypes = {
+  onNewKegsCreation: PropTypes.func
+};
 
 export default NewKegsControl;
