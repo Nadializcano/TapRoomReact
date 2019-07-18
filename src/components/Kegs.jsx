@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function Kegs(props){
   const kegsInformation =
-  return (
+  
     <div>
       <style jsx>{`
         
@@ -29,17 +29,20 @@ function Kegs(props){
     </div>;
     if (props.currentRouterPath === '/admin'){
       return (
-        <div onClick={() => }
-      )
+        <div onClick={() => {props.onKegSelection({brand: props.brand, name: props.name, price: props.brand});}}>
+        {kegsInformation}
+        </div>
+      );
     }
-  );
+
 }
 
 Kegs.propTypes = {
   name: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
-  currentRouterPath: PropTypes.string
+  currentRouterPath: PropTypes.string,
+  onKegSelection: PropTypes.func
 };
 
 export default Kegs;

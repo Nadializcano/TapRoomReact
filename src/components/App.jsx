@@ -11,15 +11,22 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      availableKegsList: []
+      availableKegsList: [],
+      selectedKeg: null
     };
     this.handleAddingNewKegsToList = this.handleAddingNewKegsToList.bind(this);
+    this.handleChangingSelectedKeg = this.handleChangingSelectedKeg.bind(this);
   }
   
   handleAddingNewKegsToList(newKegs){
     var newAvailableKegsList = this.state.availableKegsList.slice();
     newAvailableKegsList.push(newKegs);
     this.setState({availableKegsList: newAvailableKegsList});
+  }
+  
+  handleChangingSelectedKeg(kegs){
+    this.setState({selectedKeg: kegs});
+    
   }
   
   render(){
@@ -33,7 +40,9 @@ class App extends React.Component {
       <Switch>
         <Route exact path='/' render={()=><KegsList kegsList={this.state.availableKegsList} />} />
         <Route exact path='/newkegs' render={()=><NewKegsControl onNewKegsCreation={this.handleAddingNewKegsToList} />} />
-        <Route path='/admin' render={(props)=><Admin kegsList={this.state.availableKegsList} currentRouterPath={props.location.pathname} />} />
+        <Route path='/admin' render={(props)=><Admin kegsList={this.state.availableKegsList} currentRouterPath={props.location.pathname} 
+        onKegSelection={this.handleChangingSelectedKeg}
+        selectedKeg={this.state.selectedKeg} />} />
         </Switch>
       
 
