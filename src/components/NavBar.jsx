@@ -17,7 +17,7 @@ function NavBar(){
             
             `}</style>
       <div id="bar"> 
-        <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Home</Link> | <Link to="/newkegs" style={{ textDecoration: 'none', color: 'white' }}>Add Kegs</Link>
+        <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Home</Link> | <Link to="/newkegs" style={{ textDecoration: 'none', color: 'white' }}>Add Kegs</Link> | <Link to="/admin" style={{ textDecoration: 'none', color: 'white' }}>Admin</Link>
              
       </div>
     </div>

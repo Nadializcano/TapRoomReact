@@ -1,9 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function KegsDetail(){
+function KegsDetail(props){
   return (
-    <h4>Details Test</h4>
+    <div>
+    <style jsx>{`
+        
+    `}</style>
+  
+    <h3>Keg's Pints Available</h3>
+    <h4>{props.selectedKeg.pints} pints Available</h4>
+    </div>
+
   );
 }
 
+KegsDetail.propTypes = {
+  selectedKeg: PropTypes.object
+};
 export default KegsDetail;

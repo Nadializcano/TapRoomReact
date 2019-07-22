@@ -8,19 +8,23 @@ function KegsList(props){
   return (
     <div>
       <hr/>
-      {props.kegsList.map((kegs, index) =>
-        <Kegs name={kegs.name}
+      <table>
+      {Object.keys(props.kegsList).map(function(kegsId) {
+        var kegs = props.kegsList[kegsId];
+        return <Kegs name={kegs.name}
           brand={kegs.brand}
           price={kegs.price}
           currentRouterPath={props.currentRouterPath}
-          key={index}
-          onKegSelection={props.onKegSelection}/>
-      )}
+          key={kegsId}
+          onKegSelection={props.onKegSelection}
+          kegsId={kegsId}/>
+      })}
+      </table>
     </div>
   );
 }
 KegsList.propTypes = {
-  kegsList: PropTypes.array,
+  kegsList: PropTypes.object,
   currentRouterPath: PropTypes.string,
   onKegSelection: PropTypes.func
 };

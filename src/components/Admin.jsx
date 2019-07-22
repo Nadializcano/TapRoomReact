@@ -6,11 +6,10 @@ import KegsDetail from './KegsDetail';
 function Admin(props){
   let optionalSelectedKegContent = null;
   if(props.selectedKeg != null){
-    optionalSelectedKegContent = <KegsDetail />;
+    optionalSelectedKegContent = <KegsDetail selectedKeg={props.kegsList[props.selectedKeg]} />
   }
   return (
     <div>
-    <h2>Test</h2>
     {optionalSelectedKegContent}
     <KegsList kegsList={props.kegsList}
     currentRouterPath={props.currentRouterPath}
@@ -20,10 +19,10 @@ function Admin(props){
 }
 
 Admin.propTypes = {
-  kegsList: PropTypes.array,
+  kegsList: PropTypes.object,
   currentRouterPath: PropTypes.string.isRequired,
   onKegSelection: PropTypes.func.isRequired,
-  selectedKeg: PropTypes.object
+  selectedKeg: PropTypes.string
 };
 
 export default Admin;

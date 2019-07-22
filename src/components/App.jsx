@@ -5,13 +5,14 @@ import NavBar from './NavBar';
 import { Switch, Route } from 'react-router-dom';
 import NewKegsControl from './NewKegsControl';
 import Admin from './Admin';
+import { v4 } from 'uuid';
 
 class App extends React.Component {
   
   constructor(props) {
     super(props);
     this.state = {
-      availableKegsList: [],
+      availableKegsList: {},
       selectedKeg: null
     };
     this.handleAddingNewKegsToList = this.handleAddingNewKegsToList.bind(this);
@@ -19,13 +20,15 @@ class App extends React.Component {
   }
   
   handleAddingNewKegsToList(newKegs){
-    var newAvailableKegsList = this.state.availableKegsList.slice();
-    newAvailableKegsList.push(newKegs);
+    var newKegsId = v4();
+    var newAvailableKegsList = Object.assign({}, this.state.availableKegsList, {
+      [newKegsId]: newKegs
+    });
     this.setState({availableKegsList: newAvailableKegsList});
   }
   
-  handleChangingSelectedKeg(kegs){
-    this.setState({selectedKeg: kegs});
+  handleChangingSelectedKeg(kegsId){
+    this.setState({selectedKeg: kegsId});
     
   }
   

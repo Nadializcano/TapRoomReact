@@ -2,47 +2,73 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Kegs(props){
+  
   const kegsInformation =
   
     <div>
       <style jsx>{`
-        
-        h2 {
-          text-align: left;
-          padding: 10px;
+        table {
+          border-collapse: collapse;
+          width: 100%;
         }
         
-        h3 {
+        th, td {
+          padding: 8px;
           text-align: left;
-          padding: 10px;
+          border-bottom: 1px solid #ddd;
         }
         
-        h4 {
-          text-align: left;
-          padding: 10px;
+        tr:hover {
+          background-color: #f5f5f5;
         }
+        
+        
             
       `}</style>
-      <h2>{props.brand}</h2>
-      <h3>{props.name}</h3>
-      <h4>${props.price}</h4>
+      
+  
+      <table>
+      <tr>
+      <th>Brand</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Alcohol Content</th>
+      </tr>
+
+  <tr>
+      <td>{props.brand}</td>
+      <td>{props.name}</td>
+      <td>${props.price}</td>
+      <td>{props.alcoholContent}%</td>
+      
+    </tr>
+      </table>
     </div>;
     if (props.currentRouterPath === '/admin'){
       return (
-        <div onClick={() => {props.onKegSelection({brand: props.brand, name: props.name, price: props.brand});}}>
+        <div onClick={() => {props.onKegSelection(props.kegsId);}}>
+        {kegsInformation}
+        </div>
+      );
+    } else {
+      return (
+        
+        <div>
         {kegsInformation}
         </div>
       );
     }
-
+    
 }
+
 
 Kegs.propTypes = {
   name: PropTypes.string.isRequired,
   brand: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   currentRouterPath: PropTypes.string,
-  onKegSelection: PropTypes.func
+  onKegSelection: PropTypes.func,
+  kegsId: PropTypes.string.isRequired
 };
 
 export default Kegs;
