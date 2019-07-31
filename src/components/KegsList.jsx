@@ -3,10 +3,12 @@ import Kegs from './Kegs';
 import PropTypes from 'prop-types';
 
 
+
 function KegsList(props){
 
   return (
-    <div>
+    <div>  
+
       <hr/>
       <table>
       {Object.keys(props.kegsList).map(function(kegsId) {
